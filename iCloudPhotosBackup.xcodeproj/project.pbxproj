@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F001 /* iCloudPhotosBackupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F101 /* iCloudPhotosBackupApp.swift */; };
+		F002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F102 /* ContentView.swift */; };
+		F003 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F103 /* AppState.swift */; };
+		F004 /* ExportSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104 /* ExportSettings.swift */; };
+		F005 /* S3Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F105 /* S3Configuration.swift */; };
+		F006 /* SyncDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F106 /* SyncDatabase.swift */; };
+		F007 /* BackgroundScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107 /* BackgroundScheduler.swift */; };
+		F008 /* BackupDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108 /* BackupDestination.swift */; };
+		F009 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109 /* DatabaseService.swift */; };
+		F010 /* EncryptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110 /* EncryptionService.swift */; };
+		F011 /* PhotoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F111 /* PhotoLibraryService.swift */; };
+		F012 /* PhotoSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112 /* PhotoSource.swift */; };
+		F013 /* S3DestinationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113 /* S3DestinationService.swift */; };
+		F014 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114 /* SyncEngine.swift */; };
+		F015 /* SyncEngineImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F115 /* SyncEngineImpl.swift */; };
+		F016 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F116 /* VerificationService.swift */; };
+		F017 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F117 /* AppError.swift */; };
+		F018 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F118 /* Extensions.swift */; };
+		F019 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F119 /* ImageProcessor.swift */; };
+		F020 /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F120 /* LaunchAtLogin.swift */; };
+		F021 /* BackupJobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F121 /* BackupJobsView.swift */; };
+		F022 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F122 /* DashboardView.swift */; };
+		F023 /* DestinationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F123 /* DestinationsView.swift */; };
+		F024 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F124 /* HistoryView.swift */; };
+		F025 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F125 /* SettingsView.swift */; };
+		F026 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F126 /* VerificationView.swift */; };
+		F027 /* PhotoBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F127 /* PhotoBrowserView.swift */; };
+		F028 /* PhotoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128 /* PhotoPreviewView.swift */; };
+		F029 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F129 /* ImageCacheService.swift */; };
+		F02A /* ScheduledJobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12A /* ScheduledJobsView.swift */; };
+		F02B /* JobLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12B /* JobLogsView.swift */; };
+		F02C /* VerificationJobLogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C /* VerificationJobLogsView.swift */; };
+		F02D /* DocumentationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12D /* DocumentationView.swift */; };
+		F02E /* SMBConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E /* SMBConfiguration.swift */; };
+		F02F /* SMBDestinationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12F /* SMBDestinationService.swift */; };
+		F030A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F130 /* NotificationService.swift */; };
+		F031B /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F131 /* AboutView.swift */; };
+		F030 /* AWSS3 in Frameworks */ = {isa = PBXBuildFile; productRef = P001 /* AWSS3 */; };
+		F031 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = P002 /* KeychainAccess */; };
+		F032 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = P003 /* GRDB */; };
+		F033 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = P004 /* Logging */; };
+		F040 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = Assets_xcassets /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		App_Binary /* iCloudPhotosBackup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudPhotosBackup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		Assets_xcassets /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		Entitlements /* iCloudPhotosBackup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudPhotosBackup.entitlements; sourceTree = "<group>"; };
+		F101 /* iCloudPhotosBackupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudPhotosBackupApp.swift; sourceTree = "<group>"; };
+		F102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F103 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F104 /* ExportSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportSettings.swift; sourceTree = "<group>"; };
+		F105 /* S3Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3Configuration.swift; sourceTree = "<group>"; };
+		F106 /* SyncDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncDatabase.swift; sourceTree = "<group>"; };
+		F107 /* BackgroundScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundScheduler.swift; sourceTree = "<group>"; };
+		F108 /* BackupDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupDestination.swift; sourceTree = "<group>"; };
+		F109 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		F110 /* EncryptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionService.swift; sourceTree = "<group>"; };
+		F111 /* PhotoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryService.swift; sourceTree = "<group>"; };
+		F112 /* PhotoSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSource.swift; sourceTree = "<group>"; };
+		F113 /* S3DestinationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3DestinationService.swift; sourceTree = "<group>"; };
+		F114 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		F115 /* SyncEngineImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngineImpl.swift; sourceTree = "<group>"; };
+		F116 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
+		F117 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		F118 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F119 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		F120 /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		F121 /* BackupJobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupJobsView.swift; sourceTree = "<group>"; };
+		F122 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F123 /* DestinationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsView.swift; sourceTree = "<group>"; };
+		F124 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F125 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F126 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		F127 /* PhotoBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoBrowserView.swift; sourceTree = "<group>"; };
+		F128 /* PhotoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewView.swift; sourceTree = "<group>"; };
+		F129 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
+		F12A /* ScheduledJobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledJobsView.swift; sourceTree = "<group>"; };
+		F12B /* JobLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobLogsView.swift; sourceTree = "<group>"; };
+		F12C /* VerificationJobLogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationJobLogsView.swift; sourceTree = "<group>"; };
+		F12D /* DocumentationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationView.swift; sourceTree = "<group>"; };
+		F12E /* SMBConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBConfiguration.swift; sourceTree = "<group>"; };
+		F12F /* SMBDestinationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBDestinationService.swift; sourceTree = "<group>"; };
+		F130 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F131 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		Info_Plist /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FrameworksBuildPhase /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F030 /* AWSS3 in Frameworks */,
+				F031 /* KeychainAccess in Frameworks */,
+				F032 /* GRDB in Frameworks */,
+				F033 /* Logging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		Models /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F103 /* AppState.swift */,
+				F104 /* ExportSettings.swift */,
+				F105 /* S3Configuration.swift */,
+				F12E /* SMBConfiguration.swift */,
+				F106 /* SyncDatabase.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		Products /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				App_Binary /* iCloudPhotosBackup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		Resources /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				Assets_xcassets /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		Root = {
+			isa = PBXGroup;
+			children = (
+				iCloudPhotosBackup /* iCloudPhotosBackup */,
+				Products /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		Services /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F107 /* BackgroundScheduler.swift */,
+				F108 /* BackupDestination.swift */,
+				F109 /* DatabaseService.swift */,
+				F110 /* EncryptionService.swift */,
+				F130 /* NotificationService.swift */,
+				F111 /* PhotoLibraryService.swift */,
+				F112 /* PhotoSource.swift */,
+				F113 /* S3DestinationService.swift */,
+				F12F /* SMBDestinationService.swift */,
+				F114 /* SyncEngine.swift */,
+				F115 /* SyncEngineImpl.swift */,
+				F116 /* VerificationService.swift */,
+				F129 /* ImageCacheService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		Utilities /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F117 /* AppError.swift */,
+				F118 /* Extensions.swift */,
+				F119 /* ImageProcessor.swift */,
+				F120 /* LaunchAtLogin.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		Views /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F131 /* AboutView.swift */,
+				F121 /* BackupJobsView.swift */,
+				F122 /* DashboardView.swift */,
+				F123 /* DestinationsView.swift */,
+				F12D /* DocumentationView.swift */,
+				F124 /* HistoryView.swift */,
+				F125 /* SettingsView.swift */,
+				F126 /* VerificationView.swift */,
+				F127 /* PhotoBrowserView.swift */,
+				F128 /* PhotoPreviewView.swift */,
+				F12A /* ScheduledJobsView.swift */,
+				F12B /* JobLogsView.swift */,
+				F12C /* VerificationJobLogsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		iCloudPhotosBackup /* iCloudPhotosBackup */ = {
+			isa = PBXGroup;
+			children = (
+				F101 /* iCloudPhotosBackupApp.swift */,
+				F102 /* ContentView.swift */,
+				Models /* Models */,
+				Views /* Views */,
+				Services /* Services */,
+				Utilities /* Utilities */,
+				Resources /* Resources */,
+				Entitlements /* iCloudPhotosBackup.entitlements */,
+				Info_Plist /* Info.plist */,
+			);
+			path = iCloudPhotosBackup;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		iCloudPhotosBackup_Target /* iCloudPhotosBackup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BuildConfigList /* Build configuration list for PBXNativeTarget "iCloudPhotosBackup" */;
+			buildPhases = (
+				SourcesBuildPhase /* Sources */,
+				FrameworksBuildPhase /* Frameworks */,
+				ResourcesBuildPhase /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCloudPhotosBackup;
+			packageProductDependencies = (
+				P001 /* AWSS3 */,
+				P002 /* KeychainAccess */,
+				P003 /* GRDB */,
+				P004 /* Logging */,
+			);
+			productName = iCloudPhotosBackup;
+			productReference = App_Binary /* iCloudPhotosBackup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ProjectObject /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					iCloudPhotosBackup_Target = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = ProjectBuildConfigList /* Build configuration list for PBXProject "iCloudPhotosBackup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = Root;
+			packageReferences = (
+				PKG001 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */,
+				PKG002 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				PKG003 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				PKG004 /* XCRemoteSwiftPackageReference "swift-log" */,
+			);
+			productRefGroup = Products /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				iCloudPhotosBackup_Target /* iCloudPhotosBackup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ResourcesBuildPhase /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F040 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SourcesBuildPhase /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F001 /* iCloudPhotosBackupApp.swift in Sources */,
+				F002 /* ContentView.swift in Sources */,
+				F003 /* AppState.swift in Sources */,
+				F004 /* ExportSettings.swift in Sources */,
+				F005 /* S3Configuration.swift in Sources */,
+				F006 /* SyncDatabase.swift in Sources */,
+				F007 /* BackgroundScheduler.swift in Sources */,
+				F008 /* BackupDestination.swift in Sources */,
+				F009 /* DatabaseService.swift in Sources */,
+				F010 /* EncryptionService.swift in Sources */,
+				F011 /* PhotoLibraryService.swift in Sources */,
+				F012 /* PhotoSource.swift in Sources */,
+				F013 /* S3DestinationService.swift in Sources */,
+				F014 /* SyncEngine.swift in Sources */,
+				F015 /* SyncEngineImpl.swift in Sources */,
+				F016 /* VerificationService.swift in Sources */,
+				F017 /* AppError.swift in Sources */,
+				F018 /* Extensions.swift in Sources */,
+				F019 /* ImageProcessor.swift in Sources */,
+				F020 /* LaunchAtLogin.swift in Sources */,
+				F021 /* BackupJobsView.swift in Sources */,
+				F022 /* DashboardView.swift in Sources */,
+				F023 /* DestinationsView.swift in Sources */,
+				F024 /* HistoryView.swift in Sources */,
+				F025 /* SettingsView.swift in Sources */,
+				F026 /* VerificationView.swift in Sources */,
+				F027 /* PhotoBrowserView.swift in Sources */,
+				F028 /* PhotoPreviewView.swift in Sources */,
+				F029 /* ImageCacheService.swift in Sources */,
+				F02A /* ScheduledJobsView.swift in Sources */,
+				F02B /* JobLogsView.swift in Sources */,
+				F02C /* VerificationJobLogsView.swift in Sources */,
+				F02D /* DocumentationView.swift in Sources */,
+				F02E /* SMBConfiguration.swift in Sources */,
+				F02F /* SMBDestinationService.swift in Sources */,
+				F030A /* NotificationService.swift in Sources */,
+				F031B /* AboutView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DebugConfig /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = iCloudPhotosBackup/iCloudPhotosBackup.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4HER27FVVT;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iCloudPhotosBackup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icloudphotosbackup.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ReleaseConfig /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = iCloudPhotosBackup/iCloudPhotosBackup.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4HER27FVVT;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = iCloudPhotosBackup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icloudphotosbackup.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BuildConfigList /* Build configuration list for PBXNativeTarget "iCloudPhotosBackup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DebugConfig /* Debug */,
+				ReleaseConfig /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ProjectBuildConfigList /* Build configuration list for PBXProject "iCloudPhotosBackup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DebugConfig /* Debug */,
+				ReleaseConfig /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		PKG001 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/awslabs/aws-sdk-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.30.0;
+			};
+		};
+		PKG002 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+		PKG003 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.24.0;
+			};
+		};
+		PKG004 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		P001 /* AWSS3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKG001 /* XCRemoteSwiftPackageReference "aws-sdk-swift" */;
+			productName = AWSS3;
+		};
+		P002 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKG002 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		P003 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKG003 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		P004 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = PKG004 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = ProjectObject /* Project object */;
+}

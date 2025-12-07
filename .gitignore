@@ -3,6 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# Ignore my files
+IMPLEMENTATION_STATUS.md
+PLAN_PHOTO_BROWSER.md
+icloud-photos-backup-plan.md
+.DS_Store
+
+# Build 
+build
+build/
+
 # User-specific files
 *.rsuser
 *.suo
